@@ -10,15 +10,15 @@ $ git config --global user.email "yiting.yu.tw@gmail.com”
 # Help
 $ git help <verb, ex: config>
 $ git config —-help
-$ add —help
+$ add —-help
 
 ===========Local===============
 
 ##Initialize a repo from existing code
-# Go to that directory 
+# Go to that directory, initailize git, the version control system
 $ git init
 
-#If dont want to track the repo, delete .git
+#If yo dont want to track the repo, simply delete .git
 $ rm -rf .git
 
 
