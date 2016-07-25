@@ -1,0 +1,151 @@
+Git Github Commands
+================================
+$ git —version
+
+#Setup git
+$ git config --list
+$ git config --global user.name “Yiting"
+$ git config --global user.email "yiting.yu.tw@gmail.com”
+
+# Help
+$ git help <verb, ex: config>
+$ git config —-help
+$ add —help
+
+===========Local===============
+
+##Initialize a repo from existing code
+# Go to that directory 
+$ git init
+
+#If dont want to track the repo, delete .git
+$ rm -rf .git
+
+
+
+## Before we commit 
+$ git status 
+
+##Add file to staging area
+#Add all changes
+$ git add -A
+
+# git add <filename>
+$ git status 
+
+#Before commit it, if dont want to track the file
+$ git reset <filename>
+
+#Reset all  
+$ git reset
+
+
+
+###Commit changes 
+#The "m" message is important, because we want to be detail of the changes
+$ git status
+$ git add -A
+$ git commit -m "Initial Commit"
+
+#To check the log history
+$ git log 
+
+
+
+
+===========Remote===============
+
+###Cloning a remote repo.
+#And where you wnat to clone? The "." just means it's cloning to the current repo
+$ git clone https://github.com/yuyiting23/test-repo . 
+
+#Viewing info about the remote repo
+$ git remote -v
+
+#List all the branches, not only locally, but remotely
+$ git branch -a
+
+
+
+###Pushing changes
+#See what you have modified on the local repo
+$ git diff 
+$ git status
+$ git add -A
+
+#Commit first (sync) at the local repo
+$ git commit -m "rename file "
+
+#Rememer to pull changes of the remote repo(since the last time we pulled), because we may be collatbrating with others
+#And we need to update the changes before pushing
+#"origin" is the name of the remote repp, and "master" is the branch we want to push to
+$ git pull origin master
+
+
+
+
+
+===========Common Workflow===============
+
+###Create a branch for desired feature
+$ git branch test_branch
+
+#List all the local branches(defualt is the master branch before checking out)
+$ git branch
+
+#Switch to that newly created branch, and inpect it 
+$ git checkout test_branch
+$ git branch
+
+#After we modified something on the test_branch, we need to do the same things as before
+#Noted, there has no effect on our local master branch, and no effect on the remote repo
+$ git status
+$ git add -A
+$ git commit -m "new line of test.txt on test_branch"
+
+#After commit, push branch to remote
+#"-u", basically associate "the local test_branch" to "the remote test_branch"
+#so that in the future, we can simply use "git pull, git push", instead of specifying details
+$ git push -u origin test_branch
+
+#To see all the branches, locally and remotely
+$ git branch -a 
+
+
+
+###Merge a branch 
+#First checkout "local" master branch 
+$ git checkout master
+
+#Pull all the changes down before commiting to master,
+#in case any changes were made while we are working on the features
+$ git pull origin master 
+
+#To find the branches we have merged so far. 
+#Result shows Only "master", because we haven't merged anything back to the master branch yet 
+$ git branch --merged
+
+#Merge the test_branch to the local master branch
+$ git merge 
+
+#Push it to the remote repo
+$ git push origin master 
+
+
+###Deleting a branch
+#Inpect what have been merged to the master branch
+$ git branch --merged
+
+#Delete the local branch 
+$ git branch -d test_branch
+
+#Check whether the local test_branch has been deleted 
+$ git branch -a
+
+#Delete the remote branch
+$ git push origin --delete test_branch 
+
+#Inspect the result
+$ git branch -a
+
+
