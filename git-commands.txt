@@ -1,6 +1,6 @@
 Git Github Commands
 ================================
-$ git —version
+$ git —-version
 
 #Setup git
 $ git config --list
