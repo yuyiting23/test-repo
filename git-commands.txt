@@ -113,7 +113,7 @@ $ git branch -a
 
 
 ###Merge a branch 
-#First checkout "local" master branch 
+#First checkout "local" master branch. 
 $ git checkout master
 
 #Pull all the changes down before commiting to master,
@@ -124,7 +124,7 @@ $ git pull origin master
 #Result shows Only "master", because we haven't merged anything back to the master branch yet 
 $ git branch --merged
 
-#Merge the test_branch to the local master branch
+#Merge the test_branch to the local master branch(Notice, we have to be on the master branch!)
 $ git merge test_branch
 
 #Push it to the remote repo
