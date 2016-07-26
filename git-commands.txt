@@ -1,15 +1,12 @@
 Git Github Commands
 ================================
-test branch
-
+#Setup Git
 $ git —-version
-
-#Setup git
 $ git config --list
 $ git config --global user.name “Yiting"
 $ git config --global user.email "yiting.yu.tw@gmail.com”
 
-# Help
+#Help
 $ git help <verb, ex: config>
 $ git config —-help
 $ git add —-help
@@ -23,7 +20,7 @@ $ git init
 #If yo dont want to track the repo, simply delete .git
 $ rm -rf .git
 
-# Before we commit 
+#Before we commit 
 $ git status 
 
 
