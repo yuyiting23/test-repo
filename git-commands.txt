@@ -1,5 +1,5 @@
 Git Github Commands
-================================
+===========Config===============
 #Setup Git
 $ git —-version
 $ git config --list
@@ -14,7 +14,7 @@ $ git add —-help
 ===========Local===============
 
 ###Initialize a repo from existing code
-# Go to that directory, initailize git, the version control system
+#Go to that directory, initailize git, the version control system
 $ git init
 
 #If yo dont want to track the repo, simply delete .git
@@ -28,8 +28,8 @@ $ git status
 #Add all changes
 $ git add -A
 
-# git add <filename>
-# "git add ." will add all changes, just as "git add -A" 
+#git add <filename>
+#"git add ." will add all changes, just as "git add -A" 
 $ git status 
 
 #Before commit it, if we dont want to track the file
@@ -73,7 +73,7 @@ $ git status
 $ git add -A
 
 #Commit first (sync) at the local repo
-$ git commit -m "rename file "
+$ git commit -m "rename file"
 
 #Rememer to pull changes of the remote repo(since the last time we pulled), because we may be collatbrating with others
 #And we need to update the changes before pushing
