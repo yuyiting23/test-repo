@@ -128,7 +128,7 @@ $ git pull origin master
 $ git branch --merged
 
 #Merge the test_branch to the local master branch
-$ git merge 
+$ git merge test_branch
 
 #Push it to the remote repo
 $ git push origin master 
