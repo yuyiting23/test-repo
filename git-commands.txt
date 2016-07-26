@@ -10,30 +10,30 @@ $ git config --global user.email "yiting.yu.tw@gmail.com”
 # Help
 $ git help <verb, ex: config>
 $ git config —-help
-$ add —-help
+$ git add —-help
 
 ===========Local===============
 
-##Initialize a repo from existing code
+###Initialize a repo from existing code
 # Go to that directory, initailize git, the version control system
 $ git init
 
 #If yo dont want to track the repo, simply delete .git
 $ rm -rf .git
 
-
-
-## Before we commit 
+# Before we commit 
 $ git status 
 
-##Add file to staging area
+
+###Add file to staging area
 #Add all changes
 $ git add -A
 
 # git add <filename>
+# "git add ." will add all changes, just as "git add -A" 
 $ git status 
 
-#Before commit it, if dont want to track the file
+#Before commit it, if we dont want to track the file
 $ git reset <filename>
 
 #Reset all  
